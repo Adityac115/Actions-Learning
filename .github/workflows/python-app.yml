@@ -33,13 +33,15 @@ jobs:
         pytest
     - name : creating requirements.txt
       run: pip freeze > requirements.txt
+    - name : Creating docker file
+      run: ls -al
   
-  package:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Creating docker image
-        run: ls -la
+  # package:
+  #   needs: build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Creating docker image
+  #       run: ls -la
        
         
 
