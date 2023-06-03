@@ -39,6 +39,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Creating docker image
-        run: docker build -t my-app .
+        run: ls -la
+       
+        
 
 
