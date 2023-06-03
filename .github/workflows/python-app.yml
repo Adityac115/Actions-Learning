@@ -35,7 +35,7 @@ jobs:
       run: pip freeze > requirements.txt
     - name : Creating docker file
       run: |
-      docker build -t my-app .
+        docker build -t my-app .
   
   # package:
   #   needs: build
