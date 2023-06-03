@@ -31,3 +31,14 @@ jobs:
     - name: Test with pytest
       run: |
         pytest
+    - name : creating requirements.txt
+      run: pip freeze > requirements.txt
+  
+  package:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Creating docker image
+        run: docker build -t my-app .
+
+
