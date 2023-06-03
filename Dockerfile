@@ -1,9 +1,9 @@
-FROM ubuntu:latest
+FROM python:3.10-slim-buster
 
 
 COPY . .
 
-RUN pip3 install -r requirements.txt
+RUN  pip install --no-cache-dir -r requirements.txt
 
 CMD ["python3","calculator.py"]
 
